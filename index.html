@@ -179,9 +179,10 @@
   /* preview 캐러셀 */
   .preview.carousel { cursor: pointer; }
   .preview .slides { position: relative; width: 100%; height: 100%; }
-  .preview svg.slide { position: absolute; inset: 0; width: 100%; height: 100%;
+  .preview .slide { position: absolute; inset: 0; width: 100%; height: 100%;
     opacity: 0; transition: opacity .4s var(--ease); }
-  .preview svg.slide.active { opacity: 1; }
+  .preview .slide.active { opacity: 1; }
+  .preview img.slide { object-fit: cover; }
   .preview .dots { position: absolute; bottom: 7px; left: 50%; transform: translateX(-50%);
     display: flex; gap: 5px; z-index: 2; }
   .preview .dot { width: 6px; height: 6px; border-radius: 50%;
