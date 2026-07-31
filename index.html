@@ -66,14 +66,6 @@
     border-right: 1px solid var(--line);
     display: flex; flex-direction: column;
   }
-  .status {
-    display: inline-flex; align-items: center; gap: 7px;
-    font-size: .78rem; color: var(--ink-soft);
-    padding: 5px 11px; border: 1px solid var(--line); border-radius: 99px;
-    align-self: flex-start; margin-bottom: 34px;
-  }
-  .status .live { width: 7px; height: 7px; border-radius: 50%;
-    background: #2ea043; box-shadow: 0 0 0 3px rgba(46,160,67,.15); }
 
   aside .name {
     font-family: var(--serif); font-weight: 500;
@@ -232,7 +224,7 @@
   @media print {
     .wrap { display: block; max-width: none; }
     aside { position: static; height: auto; border: none; padding: 0 0 24px; }
-    aside nav, .status { display: none; }
+    aside nav { display: none; }
     main { padding: 0; }
     .block { margin-bottom: 28px; page-break-inside: avoid; }
     .preview { display: none; }
@@ -248,8 +240,6 @@
 <div class="wrap">
   <!-- ============ 사이드바 ============ -->
   <aside>
-    <span class="status"><span class="live"></span>새 기회에 열려 있습니다</span>
-
     <div class="name">
       노강민
       <span class="en">KANGMIN ROH</span>
@@ -390,19 +380,16 @@
             <!-- 슬라이드 1: 대시보드 -->
             <svg class="slide active" viewBox="0 0 320 220" xmlns="http://www.w3.org/2000/svg" font-family="Pretendard, sans-serif">
               <rect width="320" height="220" fill="#f4f6fa"/>
-              <!-- 헤더 -->
               <path d="M22 30 l9 -14 9 14 z" fill="#2f9e6e"/>
               <text x="46" y="30" font-size="13" font-weight="700" fill="#1e2430">오름</text>
               <rect x="232" y="16" width="66" height="20" rx="10" fill="#fff2e0"/>
               <circle cx="245" cy="26" r="4" fill="#ff8b4c"/>
               <text x="254" y="30" font-size="10" font-weight="600" fill="#e8791f">12일 연속</text>
-              <!-- 진행 카드 -->
               <rect x="22" y="48" width="276" height="60" rx="12" fill="#ffffff" stroke="#e6e8ec"/>
               <text x="36" y="70" font-size="10" fill="#8a909c">오늘의 학습</text>
               <text x="36" y="90" font-size="16" font-weight="700" fill="#1e2430">68% 완료</text>
               <rect x="150" y="80" width="132" height="8" rx="4" fill="#eef0f4"/>
               <rect x="150" y="80" width="90" height="8" rx="4" fill="#2f9e6e"/>
-              <!-- 과목 카드 -->
               <rect x="22" y="120" width="132" height="82" rx="12" fill="#ffffff" stroke="#e6e8ec"/>
               <rect x="36" y="134" width="26" height="26" rx="7" fill="#e3f3ec"/>
               <text x="36" y="176" font-size="10" font-weight="600" fill="#1e2430">정보처리기사</text>
@@ -417,16 +404,13 @@
             <!-- 슬라이드 2: 퀴즈 -->
             <svg class="slide" viewBox="0 0 320 220" xmlns="http://www.w3.org/2000/svg" font-family="Pretendard, sans-serif">
               <rect width="320" height="220" fill="#f4f6fa"/>
-              <!-- 타이머 -->
               <rect x="22" y="18" width="276" height="6" rx="3" fill="#eef0f4"/>
               <rect x="22" y="18" width="150" height="6" rx="3" fill="#ff8b4c"/>
               <text x="270" y="40" font-size="10" font-weight="600" fill="#8a909c">0:42</text>
               <text x="22" y="40" font-size="10" fill="#8a909c">문제 7 / 20</text>
-              <!-- 문제 -->
               <rect x="22" y="50" width="276" height="46" rx="10" fill="#ffffff" stroke="#e6e8ec"/>
               <text x="36" y="72" font-size="11" font-weight="600" fill="#1e2430">다음 중 정규화의 목적으로</text>
               <text x="36" y="87" font-size="11" font-weight="600" fill="#1e2430">옳은 것은?</text>
-              <!-- 선택지 -->
               <rect x="22" y="104" width="276" height="24" rx="8" fill="#ffffff" stroke="#e6e8ec"/>
               <text x="36" y="120" font-size="10" fill="#454a55">① 데이터 중복 최소화</text>
               <rect x="22" y="132" width="276" height="24" rx="8" fill="#e7f6ee" stroke="#2f9e6e" stroke-width="1.5"/>
@@ -440,7 +424,6 @@
             <svg class="slide" viewBox="0 0 320 220" xmlns="http://www.w3.org/2000/svg" font-family="Pretendard, sans-serif">
               <rect width="320" height="220" fill="#1a1c2e"/>
               <text x="22" y="34" font-size="12" font-weight="700" fill="#eceeff">나의 성취</text>
-              <!-- 레벨 카드 -->
               <rect x="22" y="46" width="276" height="52" rx="12" fill="#252840"/>
               <circle cx="52" cy="72" r="18" fill="none" stroke="#3a3f5c" stroke-width="5"/>
               <circle cx="52" cy="72" r="18" fill="none" stroke="#ff8b4c" stroke-width="5"
@@ -448,7 +431,6 @@
               <text x="52" y="76" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">Lv7</text>
               <text x="84" y="68" font-size="10" fill="#9096b8">누적 포인트</text>
               <text x="84" y="86" font-size="15" font-weight="700" fill="#eceeff">2,480 P</text>
-              <!-- 뱃지 -->
               <text x="22" y="122" font-size="10" fill="#9096b8">획득 뱃지</text>
               <circle cx="40" cy="146" r="15" fill="#2f9e6e"/>
               <circle cx="80" cy="146" r="15" fill="#7048e8"/>
@@ -456,7 +438,6 @@
               <circle cx="160" cy="146" r="15" fill="#2f7ee8"/>
               <circle cx="200" cy="146" r="15" fill="#2a2e48" stroke="#3a3f5c" stroke-dasharray="3 3"/>
               <circle cx="240" cy="146" r="15" fill="#2a2e48" stroke="#3a3f5c" stroke-dasharray="3 3"/>
-              <!-- 주간 그래프 -->
               <text x="22" y="182" font-size="10" fill="#9096b8">주간 학습</text>
               <rect x="22" y="190" width="14" height="16" rx="3" fill="#3a3f5c"/>
               <rect x="46" y="184" width="14" height="22" rx="3" fill="#2f9e6e"/>
@@ -472,7 +453,6 @@
               <text x="22" y="32" font-size="12" font-weight="700" fill="#1e2430">PDF로 퀴즈 만들기</text>
               <rect x="228" y="19" width="70" height="18" rx="9" fill="#eae3f7"/>
               <text x="263" y="31" font-size="9" font-weight="600" fill="#7048e8" text-anchor="middle">AI 생성</text>
-              <!-- PDF 카드 -->
               <rect x="22" y="46" width="110" height="150" rx="10" fill="#ffffff" stroke="#e6e8ec"/>
               <rect x="34" y="58" width="24" height="30" rx="4" fill="#ffe2e2"/>
               <text x="46" y="78" font-size="9" font-weight="700" fill="#e14b4b" text-anchor="middle">PDF</text>
@@ -483,11 +463,9 @@
               <rect x="34" y="124" width="64" height="5" rx="2.5" fill="#eef0f4"/>
               <rect x="34" y="140" width="86" height="5" rx="2.5" fill="#eef0f4"/>
               <rect x="34" y="152" width="70" height="5" rx="2.5" fill="#eef0f4"/>
-              <!-- 화살표 -->
               <circle cx="160" cy="121" r="15" fill="#2f9e6e"/>
               <path d="M153 121 h13 m-5 -5 l5 5 -5 5" stroke="#fff" stroke-width="2"
                 fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-              <!-- 생성된 퀴즈 카드 -->
               <rect x="188" y="46" width="110" height="46" rx="9" fill="#ffffff" stroke="#e6e8ec"/>
               <text x="200" y="64" font-size="8" fill="#8a909c">Q1</text>
               <rect x="200" y="70" width="86" height="4" rx="2" fill="#e7f6ee"/>
@@ -565,7 +543,7 @@
           </div>
         </div>
         <div class="preview carousel">
-          <span class="tap-hint">탭 →</span> 
+          <span class="tap-hint">탭 →</span>
           <div class="slides">
             <img class="slide active" src="images/Car_Immobilizer_Circuit1.png" alt="이모빌라이저 실물 회로1">
             <img class="slide" src="images/Car_Immobilizer_Circuit2.png" alt="이모빌라이저 실물 회로2">
