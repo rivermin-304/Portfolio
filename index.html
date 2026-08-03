@@ -661,6 +661,12 @@
   }, { threshold: 0.12 });
   document.querySelectorAll('.fade').forEach(el => io.observe(el));
 
+   /* 이력서 PDF — 브라우저 인쇄 대화상자로 PDF 저장 (print CSS가 이력서 형태로 정리) */
+  const pdfBtn = document.getElementById('pdf-btn');
+  if (pdfBtn) {
+    pdfBtn.addEventListener('click', () => window.print());
+  }
+  
   /* preview 캐러셀 — 클릭하면 다음 화면 */
   document.querySelectorAll('.preview.carousel').forEach(car => {
     const slides = car.querySelectorAll('.slide');
